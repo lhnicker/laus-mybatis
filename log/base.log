@@ -1,0 +1,7 @@
+2017-12-01 11:06:59,587 INFO (StartupInfoLogger.java:48)- Starting Application on WIN-L3KAGHHG6M2 with PID 2448 (E:\test\laus\spring-boot\learn-mybatis\target\classes started by Administrator in E:\test\laus\spring-boot\learn-mybatis)
+2017-12-01 11:06:59,592 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-01 11:06:59,593 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-12-01 11:07:09,478 INFO (StartupInfoLogger.java:57)- Started Application in 10.419 seconds (JVM running for 12.16)
+2017-12-01 11:07:27,337 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from `drugresiduedetection` where TraceID=? and IsValid in (1) 
+2017-12-01 11:07:27,381 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 201710251350506792155384192(String)
+2017-12-01 11:07:27,459 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
