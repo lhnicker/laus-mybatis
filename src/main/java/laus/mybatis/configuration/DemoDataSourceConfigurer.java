@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan(basePackages = {"laus.mybatis.demo.mapper"}, sqlSessionFactoryRef = "demoSqlSessionFactory")
+@MapperScan(basePackages = {"laus.mybatis.demo.mapper"}, sqlSessionFactoryRef = "demoSqlSessionFactory", sqlSessionTemplateRef = "demoSqlSessionTemplate")
 public class DemoDataSourceConfigurer {
 	
 	@Autowired
