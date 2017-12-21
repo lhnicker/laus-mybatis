@@ -1,0 +1,24 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "laus.mybatis.configuration.DataSourceConfigurer",
+      "name": "spring.datasource.demo",
+      "sourceMethod": "dataSourceDemo()",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "laus.mybatis.configuration.DataSourceConfigurer",
+      "name": "spring.datasource.eggtracereader",
+      "sourceMethod": "dataSourceEggtraceReader()",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "laus.mybatis.configuration.DataSourceConfigurer",
+      "name": "spring.datasource.eggtracewriter",
+      "sourceMethod": "dataSourceEggtraceWriter()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": []
+}

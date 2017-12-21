@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import laus.mybatis.annotation.DataSource;
+import laus.mybatis.annotation.Authentication;
+import laus.mybatis.annotation.SwitchDataSource;
 import laus.mybatis.eggtrace.controller.DetectionController;
 import laus.mybatis.eggtrace.dynamicds.mappers.DynamicDataSourceDetectionMapper;
 import laus.mybatis.eggtrace.model.DrugResidueDetection;
@@ -24,7 +25,8 @@ public class DynamicDatasourceDetectionController {
 	@Autowired
 	private DynamicDataSourceDetectionMapper service;
 
-	@DataSource("EggtraceReader")
+	@Authentication(login = true, allow_roles = {"admin", "manager"}, deny_roles = {"anonymous"})
+	@SwitchDataSource("EggtraceReader")
 	@RequestMapping(value = "/detail", method = {RequestMethod.GET, RequestMethod.POST})
 	public ArrayList<DrugResidueDetection> GetByTraceID(String traceid) {
 		return service.GetByTraceID(traceid);

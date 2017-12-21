@@ -3,11 +3,15 @@ package laus.mybatis.configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/*
+/**
  * 保存当前线程使用的数据源名
- * 
- * @author LiuHan
- * @create 2017/12/01
+ * All rights Reserved, Code By LiuHan
+ * @Title:     DataSourceContextHolder.java   
+ * @Package    laus.mybatis.configuration   
+ * @author:    LiuHan   
+ * @date:      2017年12月21日 下午2:27:28   
+ * @version    V1.0.0
+ * @Copyright: 2017 www.eggworld.cn Inc. All rights reserved.
  */
 public class DataSourceContextHolder {
 	
@@ -16,7 +20,7 @@ public class DataSourceContextHolder {
 	/*
 	 * 默认数据源名
 	 */
-	public static final String DEFAULT_DS = "demo";
+	public static final String DEFAULT_DS = "DemoDB";
 	
 	/*
 	 * 当前线程

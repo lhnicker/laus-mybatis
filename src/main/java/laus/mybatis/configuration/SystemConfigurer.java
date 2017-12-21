@@ -21,8 +21,6 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import laus.mybatis.interceptor.AuthenticationInterceptor;
-
 @Configuration
 public class SystemConfigurer implements WebMvcConfigurer {
 
@@ -46,7 +44,7 @@ public class SystemConfigurer implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new AuthenticationInterceptor()).addPathPatterns("/**");
+		//registry.addInterceptor(new AuthenticationInterceptor()).addPathPatterns("/**");
 	}
 
 	@Override

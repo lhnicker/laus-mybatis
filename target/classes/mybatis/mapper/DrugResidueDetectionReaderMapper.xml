@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="laus.mybatis.eggtrace.reader.mapper.DrugResidueDetectionReaderMapper">
+    <resultMap id="BaseResultMap" type="laus.mybatis.eggtrace.model.DrugResidueDetection" >
+        <result column="DrugResDeteID" property="DrugResDeteID" jdbcType="VARCHAR" />
+        <result column="TraceID" property="TraceID" jdbcType="VARCHAR" />
+        <result column="DetectionTypeID" property="DetectionTypeID" jdbcType="SMALLINT" />
+        <result column="DetectionTypeName" property="DetectionTypeName" jdbcType="VARCHAR" />
+        <result column="DetectionPic" property="DetectionPic" jdbcType="VARCHAR" />
+        <result column="DetectionID" property="DetectionID" jdbcType="SMALLINT"/>
+        <result column="DetectionResult" property="DetectionResult" jdbcType="VARCHAR" />
+        <result column="IsValid" property="IsValid" jdbcType="SMALLINT" />
+        <result column="CreateTime" property="CreateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+    
+    <sql id="Base_Column_List" >
+        DrugResDeteID, TraceID, DetectionTypeID, DetectionTypeName, DetectionPic, DetectionID, DetectionResult, IsValid, CreateTime
+    </sql>
+    
+    <select id="GetByTraceID" resultMap="BaseResultMap" >
+       SELECT TOP 1 
+       <include refid="Base_Column_List" /> 
+       FROM `drugresiduedetection` WHERE TraceID=#{TraceID} AND IsValid IN (1)
+    </select>
+</mapper>

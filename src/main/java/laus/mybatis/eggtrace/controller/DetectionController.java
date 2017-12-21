@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import laus.mybatis.annotation.EggtraceAround;
@@ -24,9 +25,10 @@ public class DetectionController {
 	private DrugResidueDetectionReaderMapper service;
 
 	@EggtraceAround
-	@RequestMapping(value = "/detail", method = {RequestMethod.GET, RequestMethod.POST})
-	public ArrayList<DrugResidueDetection> GetByTraceID(String traceid) {
-		return service.GetByTraceID(traceid);
+	@RequestMapping(value = "/detail/{traceid}", method = {RequestMethod.GET, RequestMethod.POST})
+	public ArrayList<DrugResidueDetection> GetByTraceID(@PathVariable(value="traceid") String tid) {
+		String traceID = tid;
+		return service.GetByTraceID(traceID);
 	}
 	
 }
